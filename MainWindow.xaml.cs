@@ -40,7 +40,10 @@ namespace lecteurEpub
 
              //choixpage();
             HTMLDocument htmlDocument = (HTMLDocument)wb1.Document;
+            string title=  htmlDocument.title;
+
             tb1.Text = htmlDocument.documentElement.innerText;
+            tb1.Text = tb1.Text.Replace(title, "");
             choixpage();
         }
 
